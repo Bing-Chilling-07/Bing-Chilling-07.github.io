@@ -1,58 +1,108 @@
 :root {
-  --bg-color: #f9f9f9;
-  --text-color: #111;
-  --accent-color: #000;
-  --highlight-color: #ff4081;
-  --font: 'Roboto Mono', monospace;
+  --bg-color: #0a0f2c;
+  --text-color: #f1f1f1;
+  --accent: #88ccff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font);
+  font-family: 'Segoe UI', monospace;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease;
 }
 
 header {
-  border: 3px solid var(--accent-color);
-  padding: 1rem;
   text-align: center;
   margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-h1, h2 {
-  margin: 0;
-  padding: 0.5rem 0;
+.subtitle {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 nav {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
 }
 
 section {
-  border: 2px dashed var(--accent-color);
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-a {
-  color: var(--highlight-color);
-  text-decoration: none;
-  font-weight: bold;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(136, 204, 255, 0.2);
+  animation: fadeInUp 0.6s ease-out;
 }
 
 footer {
-  border-top: 3px solid var(--accent-color);
-  padding-top: 1rem;
-  margin-top: 2rem;
   text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  animation: fadeIn 1s ease-in-out;
 }
 
-ul {
-  padding-left: 1rem;
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.3rem;
 }
 
-li {
-  margin: 0.5rem 0;
+footer a:hover {
+  color: white;
 }
+
+.glow-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 0 40px 15px rgba(136, 204, 255, 0.3) inset;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

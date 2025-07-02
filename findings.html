@@ -4,91 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interesting Stuff</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .dark {
-      --bg-color: #111;
-      --text-color: #eee;
-      --accent-color: #fff;
-      --highlight-color: #ff4081;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      margin: 0 0.5rem;
-    }
-
-    .toggle-btn {
-      background-color: var(--accent-color);
-      color: var(--bg-color);
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .toggle-btn svg {
-      width: 1em;
-      height: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="glow-border"></div>
+
   <header>
     <h1>Interesting Stuff</h1>
     <nav>
-      <a href="index.html">Home</a> |
+      <a href="index.html">About</a>
       <a href="projects.html">Projects</a>
     </nav>
   </header>
 
-  <section>
-    <ul>
-      <li><a href="#">Cool Article or Tool</a></li>
-      <li><a href="#">Another Inspiring Link</a></li>
-    </ul>
-  </section>
+  <main>
+    <section>
+      <ul>
+        <li><a href="#">A fascinating blog post</a></li>
+        <li><a href="#">Some obscure math thing</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>Connect with me:</p>
     <p>
       <a href="https://github.com/yourusername">GitHub</a> |
       <a href="https://twitter.com/yourusername">Twitter</a> |
       <a href="mailto:you@example.com">Email</a>
     </p>
   </footer>
-  <script>
-    const toggleButton = document.getElementById('mode-toggle');
-    const modeIcon = document.getElementById('mode-icon');
-
-    function applyStoredTheme() {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark') {
-        document.body.classList.add('dark');
-        modeIcon.textContent = '☀️';
-      } else {
-        document.body.classList.remove('dark');
-        modeIcon.textContent = '🌙';
-      }
-    }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      const isDark = document.body.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      modeIcon.textContent = isDark ? '☀️' : '🌙';
-    }
-
-    applyStoredTheme();
-  </script>
 </body>
 </html>
+
