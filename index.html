@@ -1,7 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo-Brutalist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #111;
+      --accent-color: #000;
+      --highlight-color: #ff4081;
+      --font: 'Roboto Mono', monospace;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+    }
+
+    header {
+      border: 3px solid var(--accent-color);
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1, h2 {
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+
+    section {
+      border: 2px dashed var(--accent-color);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: var(--highlight-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 3px solid var(--accent-color);
+      padding-top: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Neo-Brutalist Portfolio</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a [your profession/interests]. I love creating minimalist but powerful web experiences and exploring the intersection of code and design.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Project 1</strong>: A brief description and <a href="#">link</a></li>
+      <li><strong>Project 2</strong>: A brief description and <a href="#">link</a></li>
+    </ul>
+  </section>
+
+  <section id="findings">
+    <h2>Interesting Stuff I Came Across</h2>
+    <ul>
+      <li><a href="#">Cool Article or Tool</a></li>
+      <li><a href="#">Another Inspiring Link</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <p>
+      <a href="https://github.com/yourusername">GitHub</a> |
+      <a href="https://twitter.com/yourusername">Twitter</a> |
+      <a href="mailto:you@example.com">Email</a>
+    </p>
+  </footer>
 </body>
 </html>
