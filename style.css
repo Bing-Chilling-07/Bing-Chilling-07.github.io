@@ -2,6 +2,7 @@
   --bg-color: #0a0f2c;
   --text-color: #f1f1f1;
   --accent: #88ccff;
+  --pink-accent: hotpink;
 }
 
 * {
@@ -129,4 +130,14 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.pink-link {
+  color: var(--pink-accent);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.pink-link:hover {
+  color: #ff8ed6;
+  text-shadow: 0 0 8px #ff8ed6;
 }
