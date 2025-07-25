@@ -146,20 +146,15 @@ footer a:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 999;
-}
-
-.profile-picture::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-image: url('#Cats.jpeg'); /* replace with your actual image path */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url('#Cats.jpeg'); /* CHANGE this path if needed */
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
   border: 2px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 9999;
 }
 @media screen and (max-width: 600px) {
   .profile-picture {
