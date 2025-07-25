@@ -5,9 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interesting Stuff</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #b0e0e6;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      color: #add8e6;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .content {
+      flex: 1;
+      margin-left: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .pink-link {
+      color: #ffb6c1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <h1>Interesting Stuff</h1>
     <nav>
@@ -16,25 +95,46 @@
     </nav>
   </header>
 
-  <main>
-    <section>
+  <div class="container">
+    <aside class="sidebar">
       <ul>
-        <li><p><strong><a href="https://en.wikipedia.org/wiki/Riemann_series_theorem" class = "pink-link">Riemann Rearrangement theorem</a></strong>: Rearranging the terms of a <a href="https://en.wikipedia.org/wiki/Conditional_convergence" class = "pink-link">conditionally convergent</a> series
-          would give us a new Real number, infact we can construct any real number from rearranging the terms of a conditionally convergent series, I found this result to be very interesting.
-          Also do checkout this <a href="https://youtu.be/U0w0f0PDdPA?si=Ck2mL0uMWRP7y6fJ" class = "pink-link">youtube video</a> which explains the theorem really well.
-        </p></li>
-        <li><a href="#">Some obscure math thing</a></li>
+        <li><a onclick="showSection('riemann')">Riemann Rearrangement Theorem</a></li>
+        <li><a onclick="showSection('obscure')">Some Obscure Math Thing</a></li>
       </ul>
-    </section>
-  </main>
+    </aside>
 
+    <section class="content">
+      <div id="riemann" class="content-section active">
+        <p><strong><a href="https://en.wikipedia.org/wiki/Riemann_series_theorem" class="pink-link">Riemann Rearrangement Theorem</a></strong>: 
+          Rearranging the terms of a 
+          <a href="https://en.wikipedia.org/wiki/Conditional_convergence" class="pink-link">conditionally convergent</a> 
+          series would give us a new real number. In fact, we can construct any real number by rearranging the terms of such a series.
+          I found this result very interesting. Also, check out this 
+          <a href="https://youtu.be/U0w0f0PDdPA?si=Ck2mL0uMWRP7y6fJ" class="pink-link">YouTube video</a> 
+          that explains the theorem really well.
+        </p>
+      </div>
+
+      <div id="obscure" class="content-section">
+        <p>Some obscure math thing content goes here. You can later fill this with more detailed explanation or links.</p>
+      </div>
+    </section>
+  </div>
 
   <footer>
     <p>
-      <a href="https://github.com/Bing-Chilling-07" target="_blank" rel="noopener noreferrer">GitHub</a> |
-      <a href="https://www.linkedin.com/in/vedantam-srivatsav-14321a306/" target="_blank" rel="noopener noreferrer">Linkedin</a> |
-      <a href="mailto:vedantamsrivatsav6@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://github.com/Bing-Chilling-07" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/vedantam-srivatsav-14321a306/" target="_blank">LinkedIn</a> |
+      <a href="mailto:vedantamsrivatsav6@gmail.com" target="_blank">Email</a>
     </p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
