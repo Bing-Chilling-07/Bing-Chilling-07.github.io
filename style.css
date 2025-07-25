@@ -149,7 +149,7 @@ footer a:hover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-image: url('#Cats.jpeg'); /* CHANGE this path if needed */
+  background-image: url('cats.jpeg'); /* CHANGE this path if needed */
   background-size: cover;
   background-position: center;
   border: 2px solid white;
