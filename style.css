@@ -141,3 +141,28 @@ footer a:hover {
   color: #ff8ed6;
   text-shadow: 0 0 8px #ff8ed6;
 }
+
+.profile-picture {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.profile-picture::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url('#Cats.jpeg'); /* replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  .profile-picture {
+    display: none;
+  }
+}
