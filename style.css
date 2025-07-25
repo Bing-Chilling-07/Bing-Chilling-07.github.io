@@ -156,8 +156,3 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   z-index: 9999;
 }
-@media screen and (max-width: 600px) {
-  .profile-picture {
-    display: none;
-  }
-}
