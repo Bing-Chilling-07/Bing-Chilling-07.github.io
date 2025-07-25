@@ -31,8 +31,8 @@ body::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 15, 44, 0.75); /* dim overlay */
-  backdrop-filter: blur(4px);         /* blur effect */
+  background: rgba(10, 15, 44, 0.4); /* dim overlay */
+  backdrop-filter: blur(2px);         /* blur effect */
   z-index: -1;                        /* keep behind content */
 }
 
